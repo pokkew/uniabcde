@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Professores: {{ teacher.name }}{% endblock %}
+
+{% block content %}
+    <h2>{{ teacher.name }}</h2>
+    {% if teacher.course %}
+        <p><strong>Curso:</strong> {{ teacher.course.name }}</p>
+    {% endif %}
+    {% if teacher.phone %}<p><strong>Telefone:</strong> {{ teacher.phone }}</p>{% endif %}
+    {% if teacher.email %}<p><strong>Email:</strong> {{ teacher.email }}</p>{% endif %}
+    {% if teacher.salary %}<p><strong>Salário: R$ </strong> {{ teacher.salary }}</p>{% endif %}
+    {% if teacher.start_date %}<p><strong>Data de Início: </strong> {{ teacher.start_date }}</p>{% endif %}
+{% endblock content %}

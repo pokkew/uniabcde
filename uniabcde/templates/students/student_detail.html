@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Alunos: {{ student.name }}{% endblock %}
+
+{% block content %}
+    <h2>{{ student.name }}</h2>
+    {% if student.course %}
+        <p><strong>Curso:</strong> {{ student.course.name }}</p>
+        <p><strong>Mensalidade: R$ </strong> {{ student.course.mensalidade }}</p>
+    {% endif %}
+    {% if student.phone %}<p><strong>Telefone:</strong> {{ student.phone }}</p>{% endif %}
+    {% if student.email %}<p><strong>Email:</strong> {{ student.email }}</p>{% endif %}
+    {% if student.art %}<p><strong>RA:</strong> {{ student.art }}</p>{% endif %}
+{% endblock content %}
